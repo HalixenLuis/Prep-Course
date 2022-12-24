@@ -6,6 +6,15 @@ function crearGato (nombre, edad) {
   // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
   // Devuelve el objeto
   // Tu código:
+  let gato = {
+    nombre: nombre,
+    edad: edad,
+    meow: function () {
+     return "Meow!"
+    }
+}
+return gato;
+
 }
 
 function agregarPropiedad (objeto, property) {
@@ -13,6 +22,7 @@ function agregarPropiedad (objeto, property) {
   // Devuelve el objeto
   // NOTA: El nombre de la propiedad no es "propiedad", el nombre es el valor del argumento llamado "property" (una cadena/string)
   // Tu código:
+  objeto[property] = null
 }
 
 function invocarMetodo (objeto, metodo) {
