@@ -10,7 +10,20 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
+  let matriz = [];
+  for (let key in objeto) {
+    matriz.push([key, objeto[key]]);
+  }
+  return matriz;
 }
+
+// function deObjetoAmatriz(objeto){
+// var arrayClaves = Object.keys(objeto) 
+// for (var clave in objeto) {
+// array.push ([clave, objeto [clave]]);
+// }return array;}
+
+//return Object.entries(objeto);}
 
 
 function numberOfCharacters(string) {
@@ -18,15 +31,49 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
+  let result = {};
+  for (let i = 0; i < string.length; i++) {
+    if (!result[string[i]]) {
+      result[string[i]] = 1;
+    } else {
+      result[string[i]]++;
+    }
+  }
+  return result;
 }
 
+// function numberOfCharacters(string) {
+//   var objeto = {}
+//   var arrayLetras = string.split("")
+//   var letrasOrdenadas = arrayLetras.sort()
+//    for (var letra of letrasOrdenadas) {
+//      if (!objeto[letra]) {
+//       objeto[letra] = 1
+//      } else {
+//       objeto[letra] += 1
+//      }
+//    }
+//    return objeto;
+// }
 
 function capToFront(s) {
   //Realiza una función que reciba como parámetro un string y mueva todas las letras mayúsculas
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+ var arrayString = string.split("")
+ var mayusculas = []
+ var minusculas = []
+ for (var letra of arrayString) {
+   if (letra == letra.toUpperCase()) {
+     mayusculas.push(letra)
+   } else { minusculas.push(letra)}
+ }
+ return mayusculas.join("") + minusculas.join("");
 }
+
+  
+
 
 
 function asAmirror(str) {
@@ -42,7 +89,7 @@ function capicua(numero){
   //Escribe una función, la cual recibe un número y determina si es o no capicúa.
   //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
-  //Escribe tu código aquí
+   //Escribe tu código aquí
 }
 
 
